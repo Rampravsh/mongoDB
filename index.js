@@ -10,7 +10,7 @@ const main = async () => {
     console.log("Connected successfully to MongoDB");
     const db = client.db("shop");
     const collection = db.collection("products");
-    const data = await collection.find({ price: { $gt: 1000 } }).toArray();
+    const data = await collection.find({ price: { $gt: 1200 } }).toArray();
     console.log(data);
     // You can start performing database operations here
   } catch (e) {
@@ -20,3 +20,4 @@ const main = async () => {
   }
 };
 main();
+console.log("hello world ");

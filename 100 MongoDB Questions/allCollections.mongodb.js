@@ -593,3 +593,56 @@ db.products.insertMany([
     tags: ["fashion", "winter"],
   },
 ]);
+
+db.blogs.insertMany([
+  {
+    title: "Introduction to MongoDB",
+    views: 1200,
+    comments: [
+      { user: "Aarav Sharma", text: "Great introduction!" },
+      { user: "Ishani Gupta", text: "Very helpful, thanks." }
+    ]
+  },
+  {
+    title: "Advanced Node.js Patterns",
+    views: 850,
+    comments: [
+      { user: "Rohan Verma", text: "I learned a lot about streams." }
+    ]
+  },
+  {
+    title: "React vs Vue in 2024",
+    views: 2500,
+    comments: [
+      { user: "Sanya Malhotra", text: "React still feels more robust." },
+      { user: "Kabir Singh", text: "Vue is much easier to pick up." }
+    ]
+  },
+  {
+    title: "Understanding Async/Await",
+    views: 1100,
+    comments: []
+  },
+  {
+    title: "CSS Grid Layout Guide",
+    views: 900,
+    comments: [
+      { user: "Ananya Pandey", text: "Finally understood grid-template-areas!" }
+    ]
+  },
+  {
+    title: "Docker for Beginners",
+    views: 1500,
+    comments: [
+      { user: "Vikram Rathore", text: "Clear and concise." }
+    ]
+  },
+  { title: "TypeScript Best Practices", views: 700, comments: [] },
+  {
+    title: "Microservices Architecture",
+    views: 2100,
+    comments: [{ user: "Meera Iyer", text: "Scaling is so much easier now." }]
+  },
+  { title: "Python for Data Science", views: 3000, comments: [] },
+  { title: "Cybersecurity Essentials", views: 450, comments: [] }
+])

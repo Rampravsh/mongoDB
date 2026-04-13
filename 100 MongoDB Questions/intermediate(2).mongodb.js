@@ -42,7 +42,6 @@ use("test");
 
 // db.products.updateMany({},{$inc:{stock:50}})
 
-
 // Q.48
 
 // db.products.updateMany({},{$rename:{"price":"prductPrice"}})
@@ -52,7 +51,6 @@ use("test");
 // db.products.updateMany({},{$unset:{"discount":""}})
 
 // db.products.find()
-
 
 // Q.50
 
@@ -64,8 +62,7 @@ use("test");
 
 //Q.52
 
-db.users.find()
-
+db.users.find();
 
 // db.users.updateMany({},{
 //   $set:{
@@ -84,5 +81,52 @@ db.users.find()
 
 // db.users.updateMany({name:"Aarav Sharma"},{$pull:{orders:{id:101}}})
 
+// db.users.deleteOne({orders:{$size:0}})
 
-// db.users.findOne({orders:{$size:1}})
+//Q.53
+
+const now = new Date();
+const fiveYearsAgo = new Date(now); // Clone current date
+fiveYearsAgo.setFullYear(now.getFullYear() - 5);
+// console.log(fiveYearsAgo)
+
+// db.orders.deleteMany({ orderDate: { $lt: new Date(fiveYearsAgo) } });
+
+//Q.54
+
+db.blogs.find();
+
+// db.blogs.updateOne({},{$inc:{views:1}})
+
+//Q.55
+
+// db.blogs.updateOne({},{$push:{comments:{user:"Ram",text:"nice work"}}})
+
+//Q.56
+
+// db.blogs.updateOne(
+//   {title: 'Introduction to MongoDB'},
+//   { $pull: { comments: { user: /Aarav/ } } },
+// );
+
+//Q.57
+
+// db.users.updateMany({},{
+//     $push:{
+//         wishlist:{id:201}
+//     }
+// })
+
+//Q.58
+
+// db.users.updateMany({},{
+//     $pull:{wishlist:{id:201}}
+// })
+
+// Q.59
+
+// db.users.updateMany({name:"Ishani Gupta"},{$push:{cart:{id:301}}})
+
+//Q.60
+
+// db.users.updateMany({},{$pull:{cart:{id:301}}})

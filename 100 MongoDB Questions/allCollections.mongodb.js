@@ -1,6 +1,5 @@
 use("test");
 
-
 db.users.insertMany([
   {
     name: "Aarav Sharma",
@@ -164,32 +163,128 @@ db.users.insertMany([
   },
 ]);
 
-
 db.orders.insertMany([
-  { user: "Aarav Sharma", totalAmount: 1200, status: "Delivered", orderDate: new Date("2023-10-01") },
-  { user: "Ishani Gupta", totalAmount: 25, status: "Pending", orderDate: new Date("2023-10-02") },
-  { user: "Rohan Verma", totalAmount: 80, status: "Shipped", orderDate: new Date("2023-10-03") },
-  { user: "Sanya Malhotra", totalAmount: 300, status: "Delivered", orderDate: new Date("2023-10-04") },
-  { user: "Kabir Singh", totalAmount: 15, status: "Cancelled", orderDate: new Date("2023-10-05") },
-  { user: "Ananya Pandey", totalAmount: 800, status: "Delivered", orderDate: new Date("2023-10-06") },
-  { user: "Vikram Rathore", totalAmount: 50, status: "Shipped", orderDate: new Date("2023-10-07") },
-  { user: "Meera Iyer", totalAmount: 250, status: "Pending", orderDate: new Date("2023-10-08") },
-  { user: "Aditya Roy", totalAmount: 100, status: "Delivered", orderDate: new Date("2023-10-09") },
-  { user: "Tara Sutaria", totalAmount: 120, status: "Shipped", orderDate: new Date("2023-10-10") },
-  { user: "Arjun Kapoor", totalAmount: 35, status: "Delivered", orderDate: new Date("2023-10-11") },
-  { user: "Kiara Advani", totalAmount: 200, status: "Pending", orderDate: new Date("2023-10-12") },
-  { user: "Siddharth Jain", totalAmount: 20, status: "Delivered", orderDate: new Date("2023-10-13") },
-  { user: "Pooja Hegde", totalAmount: 40, status: "Cancelled", orderDate: new Date("2023-10-14") },
-  { user: "Varun Dhawan", totalAmount: 30, status: "Shipped", orderDate: new Date("2023-10-15") },
-  { user: "Kriti Sanon", totalAmount: 90, status: "Delivered", orderDate: new Date("2023-10-16") },
-  { user: "Ayushmann Khurrana", totalAmount: 45, status: "Pending", orderDate: new Date("2023-10-17") },
-  { user: "Shraddha Kapoor", totalAmount: 180, status: "Delivered", orderDate: new Date("2023-10-18") },
-  { user: "Ranbir Kapoor", totalAmount: 60, status: "Shipped", orderDate: new Date("2023-10-19") },
-  { user: "Alia Bhatt", totalAmount: 110, status: "Delivered", orderDate: new Date("2023-10-20") }
-])
-
-
-
+  {
+    user: "Aarav Sharma",
+    totalAmount: 1200,
+    status: "Delivered",
+    orderDate: new Date("2023-10-01"),
+  },
+  {
+    user: "Ishani Gupta",
+    totalAmount: 25,
+    status: "Pending",
+    orderDate: new Date("2023-10-02"),
+  },
+  {
+    user: "Rohan Verma",
+    totalAmount: 80,
+    status: "Shipped",
+    orderDate: new Date("2023-10-03"),
+  },
+  {
+    user: "Sanya Malhotra",
+    totalAmount: 300,
+    status: "Delivered",
+    orderDate: new Date("2023-10-04"),
+  },
+  {
+    user: "Kabir Singh",
+    totalAmount: 15,
+    status: "Cancelled",
+    orderDate: new Date("2023-10-05"),
+  },
+  {
+    user: "Ananya Pandey",
+    totalAmount: 800,
+    status: "Delivered",
+    orderDate: new Date("2023-10-06"),
+  },
+  {
+    user: "Vikram Rathore",
+    totalAmount: 50,
+    status: "Shipped",
+    orderDate: new Date("2023-10-07"),
+  },
+  {
+    user: "Meera Iyer",
+    totalAmount: 250,
+    status: "Pending",
+    orderDate: new Date("2023-10-08"),
+  },
+  {
+    user: "Aditya Roy",
+    totalAmount: 100,
+    status: "Delivered",
+    orderDate: new Date("2023-10-09"),
+  },
+  {
+    user: "Tara Sutaria",
+    totalAmount: 120,
+    status: "Shipped",
+    orderDate: new Date("2023-10-10"),
+  },
+  {
+    user: "Arjun Kapoor",
+    totalAmount: 35,
+    status: "Delivered",
+    orderDate: new Date("2023-10-11"),
+  },
+  {
+    user: "Kiara Advani",
+    totalAmount: 200,
+    status: "Pending",
+    orderDate: new Date("2023-10-12"),
+  },
+  {
+    user: "Siddharth Jain",
+    totalAmount: 20,
+    status: "Delivered",
+    orderDate: new Date("2023-10-13"),
+  },
+  {
+    user: "Pooja Hegde",
+    totalAmount: 40,
+    status: "Cancelled",
+    orderDate: new Date("2023-10-14"),
+  },
+  {
+    user: "Varun Dhawan",
+    totalAmount: 30,
+    status: "Shipped",
+    orderDate: new Date("2023-10-15"),
+  },
+  {
+    user: "Kriti Sanon",
+    totalAmount: 90,
+    status: "Delivered",
+    orderDate: new Date("2023-10-16"),
+  },
+  {
+    user: "Ayushmann Khurrana",
+    totalAmount: 45,
+    status: "Pending",
+    orderDate: new Date("2023-10-17"),
+  },
+  {
+    user: "Shraddha Kapoor",
+    totalAmount: 180,
+    status: "Delivered",
+    orderDate: new Date("2023-10-18"),
+  },
+  {
+    user: "Ranbir Kapoor",
+    totalAmount: 60,
+    status: "Shipped",
+    orderDate: new Date("2023-10-19"),
+  },
+  {
+    user: "Alia Bhatt",
+    totalAmount: 110,
+    status: "Delivered",
+    orderDate: new Date("2023-10-20"),
+  },
+]);
 
 db.products.insertMany([
   {
@@ -199,7 +294,11 @@ db.products.insertMany([
     stock: 15,
     discount: 10,
     tags: ["tech", "work"],
-    reviews: [{ user: "Aarav Sharma", rating: 5 }]
+    reviews: [
+      { user: "Aarav Sharma", rating: 5 },
+      { user: "Meera Iyer", rating: 4 },
+      { user: "Aditya Roy", rating: 5 },
+    ],
   },
   {
     name: "Wireless Mouse",
@@ -208,7 +307,11 @@ db.products.insertMany([
     stock: 100,
     discount: 5,
     tags: ["office", "pc"],
-    reviews: [{ user: "Ishani Gupta", rating: 4 }]
+    reviews: [
+      { user: "Ishani Gupta", rating: 4 },
+      { user: "Kabir Singh", rating: 3 },
+      { user: "Sanya Malhotra", rating: 5 },
+    ],
   },
   {
     name: "Mechanical Keyboard",
@@ -217,7 +320,11 @@ db.products.insertMany([
     stock: 45,
     discount: 15,
     tags: ["gaming", "pc"],
-    reviews: [{ user: "Rohan Verma", rating: 5 }]
+    reviews: [
+      { user: "Rohan Verma", rating: 5 },
+      { user: "Ananya Pandey", rating: 4 },
+      { user: "Vikram Rathore", rating: 4 },
+    ],
   },
   {
     name: "Gaming Monitor",
@@ -226,7 +333,11 @@ db.products.insertMany([
     stock: 20,
     discount: 12,
     tags: ["gaming", "display"],
-    reviews: [{ user: "Sanya Malhotra", rating: 4 }]
+    reviews: [
+      { user: "Sanya Malhotra", rating: 4 },
+      { user: "Aarav Sharma", rating: 5 },
+      { user: "Rohan Verma", rating: 4 },
+    ],
   },
   {
     name: "USB-C Cable",
@@ -235,7 +346,11 @@ db.products.insertMany([
     stock: 200,
     discount: 0,
     tags: ["cable", "tech"],
-    reviews: [{ user: "Kabir Singh", rating: 5 }]
+    reviews: [
+      { user: "Kabir Singh", rating: 5 },
+      { user: "Ishani Gupta", rating: 4 },
+      { user: "Tara Sutaria", rating: 5 },
+    ],
   },
   {
     name: "Smartphone X",
@@ -244,7 +359,11 @@ db.products.insertMany([
     stock: 30,
     discount: 5,
     tags: ["mobile", "tech"],
-    reviews: [{ user: "Ananya Pandey", rating: 4 }]
+    reviews: [
+      { user: "Ananya Pandey", rating: 4 },
+      { user: "Aditya Roy", rating: 5 },
+      { user: "Meera Iyer", rating: 3 },
+    ],
   },
   {
     name: "Bluetooth Speaker",
@@ -253,7 +372,11 @@ db.products.insertMany([
     stock: 60,
     discount: 20,
     tags: ["audio", "music"],
-    reviews: [{ user: "Vikram Rathore", rating: 3 }]
+    reviews: [
+      { user: "Vikram Rathore", rating: 3 },
+      { user: "Kabir Singh", rating: 4 },
+      { user: "Sanya Malhotra", rating: 4 },
+    ],
   },
   {
     name: "Noise Cancelling Headphones",
@@ -262,7 +385,11 @@ db.products.insertMany([
     stock: 25,
     discount: 10,
     tags: ["audio", "travel"],
-    reviews: [{ user: "Meera Iyer", rating: 5 }]
+    reviews: [
+      { user: "Meera Iyer", rating: 5 },
+      { user: "Aarav Sharma", rating: 4 },
+      { user: "Ishani Gupta", rating: 5 },
+    ],
   },
   {
     name: "External Hard Drive",
@@ -271,7 +398,11 @@ db.products.insertMany([
     stock: 40,
     discount: 8,
     tags: ["storage", "backup"],
-    reviews: [{ user: "Aditya Roy", rating: 4 }]
+    reviews: [
+      { user: "Aditya Roy", rating: 4 },
+      { user: "Rohan Verma", rating: 5 },
+      { user: "Ananya Pandey", rating: 4 },
+    ],
   },
   {
     name: "Webcam 4K",
@@ -280,7 +411,11 @@ db.products.insertMany([
     stock: 18,
     discount: 10,
     tags: ["video", "work"],
-    reviews: [{ user: "Tara Sutaria", rating: 4 }]
+    reviews: [
+      { user: "Tara Sutaria", rating: 4 },
+      { user: "Vikram Rathore", rating: 5 },
+      { user: "Kabir Singh", rating: 3 },
+    ],
   },
   {
     name: "Desk Organizer",
@@ -289,7 +424,11 @@ db.products.insertMany([
     stock: 85,
     discount: 10,
     tags: ["office", "storage"],
-    reviews: [{ user: "Ranbir Kapoor", rating: 4 }]
+    reviews: [
+      { user: "Ranbir Kapoor", rating: 4 },
+      { user: "Sanya Malhotra", rating: 5 },
+      { user: "Meera Iyer", rating: 4 },
+    ],
   },
 ]);
 
@@ -299,49 +438,48 @@ db.blogs.insertMany([
     views: 1200,
     comments: [
       { user: "Aarav Sharma", text: "Great introduction!" },
-      { user: "Ishani Gupta", text: "Very helpful, thanks." }
-    ]
+      { user: "Ishani Gupta", text: "Very helpful, thanks." },
+    ],
   },
   {
     title: "Advanced Node.js Patterns",
     views: 850,
-    comments: [
-      { user: "Rohan Verma", text: "I learned a lot about streams." }
-    ]
+    comments: [{ user: "Rohan Verma", text: "I learned a lot about streams." }],
   },
   {
     title: "React vs Vue in 2024",
     views: 2500,
     comments: [
       { user: "Sanya Malhotra", text: "React still feels more robust." },
-      { user: "Kabir Singh", text: "Vue is much easier to pick up." }
-    ]
+      { user: "Kabir Singh", text: "Vue is much easier to pick up." },
+    ],
   },
   {
     title: "Understanding Async/Await",
     views: 1100,
-    comments: []
+    comments: [],
   },
   {
     title: "CSS Grid Layout Guide",
     views: 900,
     comments: [
-      { user: "Ananya Pandey", text: "Finally understood grid-template-areas!" }
-    ]
+      {
+        user: "Ananya Pandey",
+        text: "Finally understood grid-template-areas!",
+      },
+    ],
   },
   {
     title: "Docker for Beginners",
     views: 1500,
-    comments: [
-      { user: "Vikram Rathore", text: "Clear and concise." }
-    ]
+    comments: [{ user: "Vikram Rathore", text: "Clear and concise." }],
   },
   { title: "TypeScript Best Practices", views: 700, comments: [] },
   {
     title: "Microservices Architecture",
     views: 2100,
-    comments: [{ user: "Meera Iyer", text: "Scaling is so much easier now." }]
+    comments: [{ user: "Meera Iyer", text: "Scaling is so much easier now." }],
   },
   { title: "Python for Data Science", views: 3000, comments: [] },
-  { title: "Cybersecurity Essentials", views: 450, comments: [] }
-])
+  { title: "Cybersecurity Essentials", views: 450, comments: [] },
+]);
